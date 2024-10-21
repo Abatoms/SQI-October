@@ -129,18 +129,18 @@ if (studentRegistered) {
 
 */
 
-let number = prompt("Enter a number: ");
-if (number > 0) {
-  if (number % 2 === 0) {
-    console.log("Positive and even");
-  } else {
-    console.log("Positive and odd");
-  }
-} else if (number < 0) {
-  console.log("Negative");
-} else {
-  console.log("Zero");
-}
+// let number = prompt("Enter a number: ");
+// if (number > 0) {
+//   if (number % 2 === 0) {
+//     console.log("Positive and even");
+//   } else {
+//     console.log("Positive and odd");
+//   }
+// } else if (number < 0) {
+//   console.log("Negative");
+// } else {
+//   console.log("Zero");
+// }
 
 /*
 Assigment:
@@ -182,3 +182,67 @@ Input: Genre = "Romance", Year = 2015, Status = "out of stock"
 
 Output: "The discount rate for this book is 10%."
 */
+
+// Solution to the assignment
+console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.");
+console.log("Assignment Solution");
+console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.");
+let genre = "Romance";
+let publicationYear = 2005;
+let instock = true;
+let discount;
+
+if (genre === "Science Fiction") {
+  // do something
+  if (publicationYear < 2000) {
+    if (instock) {
+      discount = 0.2;
+    } else {
+      discount = 0.15;
+    }
+  } else if (publicationYear >= 2000) {
+    if (instock) {
+      discount = 0.1;
+    } else {
+      discount = 0.05;
+    }
+  } else {
+    console.log("Invalid year entered");
+  }
+} else if (genre === "Romance") {
+  // do something
+  if (publicationYear < 2010) {
+    if (instock) {
+      discount = 0.25;
+    } else {
+      discount = 0.2;
+    }
+  } else if (publicationYear >= 2010) {
+    if (instock) {
+      discount = 0.15;
+    } else {
+      discount = 0.1;
+    }
+  } else {
+    console.log("Invalid year entered");
+  }
+} else {
+  // do something
+  if (publicationYear < 2005) {
+    if (instock) {
+      discount = 0.3;
+    } else {
+      discount = 0.25;
+    }
+  } else if (publicationYear >= 2005) {
+    if (instock) {
+      discount = 0.2;
+    } else {
+      discount = 0.15;
+    }
+  } else {
+    console.log("Invalid year entered");
+  }
+}
+
+console.log(`The discount rate for this book is ${discount * 100}%`);
