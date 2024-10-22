@@ -113,3 +113,79 @@ areaOfRectangle(12, 8);
 // Assignment
 // Write a function that calculates the volume of a cylinder, take the radius and height as arguments and log the volume of the cylinder
 // Write a function that calculates the area of a triangle, take the base and height as arguments and return the area of the triangle
+
+function calculateVolumeOfCylinder(radius, height) {
+  const volume = pi * radius * radius * height;
+  console.log("The volume of the cylinder is: ", volume);
+}
+
+calculateVolumeOfCylinder(7, 10);
+
+function calculateArearOfTriangle(base, height) {
+  const area = 0.5 * base * height;
+  return area;
+}
+
+const triangleArea = calculateArearOfTriangle(10, 5);
+console.log("The area of the tiangle is ", triangleArea);
+
+// 3. Arrow functions
+const sayHi = () => {
+  console.log("Hi, I am an arrow function");
+};
+
+sayHi();
+
+const sayHelloToUser = (name) => {
+  console.log("Welcome to arrow function", name);
+};
+
+sayHelloToUser("Ajanaku");
+
+const summa = (first, second) => {
+  return first + second;
+};
+
+console.log(summa(2, 3));
+
+// 5. IIFE - Immediately Invoked Function Expression
+(function callMeImmediately() {
+  console.log("I am an IIFE");
+})();
+
+// Function expression
+const myFunction = function () {
+  console.log("I am a function expression");
+};
+
+myFunction();
+
+// Basic intro to DOM
+// console.log(document);
+document.title = "Functions in JavaScript";
+// DOM
+// Document Object Model
+const sumTag = document.getElementById("sum");
+console.log(sumTag);
+// sumTag.innerHTML = "The sum of 10 and 20 is 30";
+
+function sumAndDisplay() {
+  let firstNumber = prompt("Enter the first number");
+  let secondNumber = prompt("Enter the second number");
+  let sum = Number(firstNumber) + Number(secondNumber);
+  sumTag.innerHTML =
+    "<strong><em>The sum of " +
+    firstNumber +
+    " and " +
+    secondNumber +
+    " is " +
+    sum +
+    "</em></strong>";
+  // sumTag.innerText =
+  //   "The sum of " + firstNumber + " and " + secondNumber + " is " + sum;
+  // sumTag.textContent =
+  //   "The sum of " + firstNumber + " and " + secondNumber + " is " + sum;
+  sumTag.style.color = "red";
+}
+
+sumAndDisplay();
