@@ -19,3 +19,62 @@ Example:
 findPalindromes(["madam", "apple", "racecar", "hello", "civic"]);
 // Output: ["madam", "racecar", "civic"]
 */
+
+// Task Solution
+console.log("Task Solution");
+// Question 1: Number Guessing Game
+
+function numberGuessingGame() {
+  let randomNumber = Math.floor(Math.random() * 100) + 1;
+  console.log(randomNumber);
+  let userGuess;
+  let attempts = 1;
+  let guessed = false;
+  while (!guessed) {
+    userGuess = Number(prompt("Guess a number between 1 and 100"));
+    if (userGuess < randomNumber) {
+      alert("Too low! Try again.");
+      attempts++;
+    } else if (userGuess > randomNumber) {
+      alert("Too high! Try again.");
+      attempts++;
+    } else {
+      alert(`Congratulations! You guessed the number in ${attempts} attempts!`);
+      guessed = true;
+    }
+  }
+}
+
+// numberGuessingGame();
+
+// Question 2: Palindrome Checker
+function checkPalindrome(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i]);
+    let reversedString = arr[i].split("").reverse().join("");
+    if (arr[i] === reversedString) {
+      result.push(arr[i]);
+    }
+    // console.log(reversedString);
+  }
+  console.log(result);
+}
+
+checkPalindrome(["madam", "apple", "racecar", "hello", "civic"]);
+
+// Question 3: Anagram checker
+const anagramChecker = (strOne, strTwo) => {
+  let strOneArr = strOne.split("").sort().join("");
+  let strTwoArr = strTwo.split("").sort().join("");
+  // console.log(strOneArr);
+  // console.log(strTwoArr);
+  if (strOneArr === strTwoArr) {
+    console.log("Anagram");
+  } else {
+    console.log("Not Anagram");
+  }
+};
+
+anagramChecker("listen", "silent");
+anagramChecker("recourse", "course");
